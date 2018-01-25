@@ -3,116 +3,16 @@ body, input {
 }
 
 .wrapper {
-	max-width: 1215px;
-	margin: 0 auto;
-	position: relative;
-}
-
-.modal {
 	position: absolute;
-	width: 560px;
-	height: 613px;
-	left: 0;
-	right: 0;
-	top: 48px;   /* Сделал так, чтобы при максимальной ширине окно по высоте было как на макете */
-	bottom: 0;
-	margin: auto;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+    background-image: url(../img/background.jpg);
+    background-position-y: 36px;
+    background-size: cover;
 }
 
-.modal-header, .modal-content {
-	background-color: rgba(0,0,0,0.63);
-}
-
-.modal-header {
-	height: 62px;
-	margin-bottom: 2px;
-	text-align: center;
-	line-height: 62px;
-}
-
-h1 {
-	font-size: 24px;
-	color: #fff;
-}
-
-.modal-content {
-	height: 549px;
-	text-align: center;
-}
-
-.modal-content img {
-    padding: 36px 0 28px 0;
-	display: block;
-    margin: auto;
-}
-
-.border {
-	display: inline-block;
-	width: 122px;
-	height: 1px;
-	background-color: #666;
-	border-bottom: 1px solid #000;
-	vertical-align: middle;
-}
-
-form {
-	padding: 30px 0 10px 0;
-}
-
-.modal-content span, input, label, ::placeholder, form p {
-	color: #bbbbbb;
-	
-}
-
-.modal-content span, input, label {
-	font-size: 14px;
-}
-
-input[type="text"], input[type="email"], input[type="password"] {
-    width: 276px;
-    height: 36px;
-	background-color: #0f0e0e;
-	border: 0;
-	border-bottom: 1px solid #484948;
-	margin-bottom: 16px;
-	padding:0 0 0 19px;
-	box-sizing: border-box;
-	
-}
-
-input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
-	outline: none;
-	box-shadow: 0px 0px 8px 3px rgba(75, 134, 175, 1);
-	background-color: #1b5288;
-	border-bottom: 1px solid #689bcc;
-}
-
-input[type="button"] {
-	color: #fff;
-	width: 151px;
-	height: 37px;
-	background: linear-gradient(to bottom, #6bb8e7, #2e7ac4);
-	cursor: pointer;
-	border-style: none;
-	border-radius: 3px;
-    padding: 0;
-	margin:20px 0;
-}
-
-label input {
-	vertical-align: text-top;
-}
-
-form p {
-	font-size: 11px;
-	line-height: 16px;
-}
-
-
-/* ----------------------HEADER --------------------------------------*/
-/* ----------------------HEADER --------------------------------------*/
-/* ----------------------HEADER --------------------------------------*/
-
+/*HEADER*/
 
 .header {
 	background-color: #074f8f;
@@ -161,7 +61,16 @@ text-decoration: none;
 	padding-left: 20px;
 }
 
-.header li:nth-child(7) a {
+.header li:nth-child(5)::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 31px;
+    background-color: #60b5ed;
+    top: 2px;
+}
+
+.header li:nth-child(6) a {
 	color: #fff;
 	padding-right: 17px;
 	
@@ -212,9 +121,120 @@ text-decoration: none;
 	background-color: #60b5ed;
 }
 
-.background {
-	padding-top: 84.609%;  /* Я не знал как сделать так, чтобы в пустом блоке отображался фон, не задавая фиксированную высоту. Этот метод нагуглил. */
-	background-image: url(../img/background.jpg);
-    background-size: cover;
+/*MODEL*/
+
+.modal {
+	position: absolute;
+	width: 560px;
+	height: 613px;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
 }
 
+ .modal .modal-header,.modal  .modal-content {
+	background-color: rgba(0,0,0,0.63);
+}
+
+.modal .modal-header {
+	height: 62px;
+	margin-bottom: 2px;
+	text-align: center;
+	line-height: 62px;
+}
+
+.modal h1 {
+	font-size: 24px;
+	color: #fff;
+}
+
+.modal .modal-content {
+	height: 549px;
+	text-align: center;
+}
+
+.modal .modal-content .fb {
+    padding: 36px 0 28px 0;
+    margin: auto;
+}
+
+.modal .border {
+	display: inline-block;
+	width: 122px;
+	height: 1px;
+	background-color: #666;
+	border-bottom: 1px solid #000;
+	vertical-align: middle;
+}
+
+.modal form {
+	padding: 30px 0 10px 0;
+}
+
+.modal .modal-content span,.modal input,.modal label,.modal form p {
+	color: #bbbbbb;
+}
+
+.modal ::placeholder {
+	color: #bbbbbb; 
+ }
+
+.modal  ::-ms-input-placeholder {
+	color: #bbbbbb; 
+ }
+ 
+
+.modal .modal-content span, .modal  input, .modal  label {
+	font-size: 14px;
+}
+
+.modal input[type="text"], .modal input[type="email"], .modal input[type="password"] {
+	width: 276px;
+    display: block;
+    height: 36px;
+    background-color: #0f0e0e;
+    border: 0;
+    border-bottom: 1px solid #484948;
+    padding: 0 0 0 19px;
+    margin: 0 auto 16px auto;
+    box-sizing: border-box;
+}
+
+.modal input[type="text"]:focus, .modal input[type="email"]:focus, .modal input[type="password"]:focus {
+	outline: none;
+	box-shadow: 0px 0px 8px 3px rgba(75, 134, 175, 1);
+	background-color: #1b5288;
+	border-bottom: 1px solid #689bcc;
+}
+
+.modal input[type="button"] {
+	color: #fff;
+	width: 151px;
+	height: 37px;
+	background: linear-gradient(to bottom, #6bb8e7, #2e7ac4);
+	cursor: pointer;
+	border-style: none;
+	border-radius: 3px;
+    padding: 0;
+	margin:19px 0 16px 0;
+}
+
+.modal label input {
+	vertical-align: text-top;
+}
+
+.modal form label {
+	display: block;
+    margin: 19px 0px 0px -40px;
+	cursor: pointer;
+}
+
+.modal form p {
+	font-size: 11px;
+	line-height: 16px;
+	width: 310px;
+    margin: auto;
+    text-align: center;
+}
